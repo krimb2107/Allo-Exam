@@ -1,0 +1,126 @@
+
+<html lang="fr">
+<head>
+       <title>contactUs.html</title>
+	   <meta charset="UTF-8">
+	   <style>
+	   
+	 .arriere-plan{
+	      height: 100vh;
+		  background-position: center;
+		  background-color:  #F1F1F1 ;
+		  background-size: cover;
+		  overflow: hidden;
+		  position: static; 
+	   }
+	   
+	   .nav-bar{
+	      display: flex;
+		  padding: 20px 120px;
+	   }
+	   
+	    .nav-logo img{
+	      width:175px;
+		  float: left;
+	   }
+	   
+	   .nav-links{
+	      flex: 1;
+		  float: right;
+	   }
+	   
+	   .nav-links ul{
+	       margin-left: 400px;
+		   display: inline;
+	   }
+	   
+	   .nav-links ul li{
+	       list-style: none;
+		   display: inline-block;
+		   padding: 20px 50px;
+		   
+	   }
+	   
+	   .nav-links ul a{
+	       color: black;
+		   /*texte-decoration: none;*/
+		   font-size: 15px ;
+		   background-color: #ECEEF1;
+	   }
+	   
+	   .nav-links ul li::after{
+	       content: '';
+		   width: 0;
+		   height: 2px;
+		   background: #08376B;
+		   display: block;
+		   margin: auto;   
+		   transition: .5s;
+	   }
+	   
+	   .nav-links ul li:hover::after{
+	        width: 100%;
+	   }
+	   
+	   .btn{
+	       padding: 10px 20px;
+		   border: 0;
+		   color: white;
+		   font-size:25px;
+		   background: #08376B;
+		   font-weight: bold;
+		   cursor: pointer;
+		   border: .5px solid black;
+		   border-radius: 10px;
+	   }
+	   .btn:hover{
+           color:green;
+		   }
+	   </style>
+</head>
+
+<body>
+<div class="arriere-plan">
+	<div class="nav-bar">
+	     <div class="nav-logo">
+		     <img src="..\image\logo3.PNG">
+	     </div>
+		 <div class="nav-links">
+		     <ul><br>
+			   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+		 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+              &nbsp  &nbsp &nbsp  &nbsp  &nbsp 		 
+			     <a href="index.php"><li><b>HOME</b></li></a>
+			     <a href="#"><li><b>ABOUT</b></li></a>
+			     <a href="contactUs.html"><li><b>CONTACT US</b></li></a>
+		     </ul>
+			 <button type="button" class="btn" onclick="show.php">SING IN</button>
+		 </div>  
+    </div>	
+	
+<p><b>Formulaire de contact</b></p><br>
+<form action="show.php" method="post">
+<fieldset >
+<legend><b>Vos coordonnées</b></legend>&nbsp &nbsp
+<label>Nom : </label> &nbsp <input type="texte" name="nom"  required /> <br><br> 
+<label>Prénom : </label> &nbsp <input type="texte" name="prénom" required /><br><br>&nbsp &nbsp
+<label>Mail : </label> &nbsp <input type="email" name="mail" required /><br><br>&nbsp &nbsp
+<label>Garcon  </label> &nbsp &nbsp <input type="radio" name="gender" value="Garçon" /> <br>
+<label>Fille  </label> &nbsp &nbsp &nbsp &nbsp <input type="radio" name="gender" value="Fille"/> 
+</fieldset>
+
+<br>
+
+<fieldset >
+<legend><b>Vos avis</b></legend>&nbsp &nbsp
+<textarea name="message" rows="7" cols="130" required > Des questions ?.....</textarea>
+<br><br>
+<input type="reset" name="effacer" value="Effacer"/>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<input type="submit" name="envoyer" value="Envoyer"/>
+</fieldset>
+</form>
+ </div>
+</body>
+
+</html>

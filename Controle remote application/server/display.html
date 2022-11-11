@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <title>Control Remote application</title>
+</head>
+<body style="background: linear-gradient(45deg, #7575a3, #b9d7f9);">
+    <img style="width:1440px; height:675px; margin-top: 1%; margin-left: 3%"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js" crossorigin="anonymous"></script>
+    <script>
+        
+        window.onload = function() {
+            var room = prompt("SVP enter l'id de l'étudiant cible: ");
+            if(room.trim().length == 0) {
+                document.write("<h1>L'id est nécessaire afin d'aboutir à votre but </h1>");
+                return;
+            }
+
+            socket = io.connect('http://192.168.0.180:5000');
+
+            socket.emit("join-message", room);
+            socket.on('screen-data', function(message){
+                $("img").attr("src", "data:image/png;base64," + message);
+            })
+            
+
+            $("img").moveMouse(function(e){
+
+                var posX = $(this).offset().left;
+                var posY = $(this).offset().top;
+
+                var x = e.pageX - posX;
+                var y = e.pageY - posY;
+
+                var obj = {"x" : x, "y": y, "room": room}
+                socket.emit("mouse-move", JSON.stringify(obj));
+
+            })
+
+            $("img").click(function(e){
+                var obj = {"room" : room};
+                socket.emit("mouse-click", JSON.stringify(obj));
+            })
+
+            $(window).bind("keyup", function(e) {
+
+                var obj = {"key": e.key, "room" : room};
+                socket.emit("type", JSON.stringify(obj));
+            })
+        }
+
+    </script>
+</body>
+</html>

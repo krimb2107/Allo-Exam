@@ -1,0 +1,153 @@
+
+.home-page{
+    display: flex;
+    flex-direction: column;
+    height:100vh;
+}
+
+*{ margin: 0;
+    padding:0 ;
+    font-family: sans-serif;
+ }
+ .arriere-plan{
+    height: 100vh;
+   /*background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.6)),url(bag2.JPEG);*/
+    background-position: center;
+    background-color:  #F1F1F1 ;/*#ECEEF1 #E6E9F5*/
+    background-size: cover;
+    overflow: hidden;
+    position: static; 
+ }
+
+ .btn{
+    padding: 10px 20px;
+    border: 0;
+    color: white;
+    font-size:25px;
+    background: #08376B;
+    font-weight: bold;
+    cursor: pointer;
+    border: .5px solid black;
+    border-radius: 10px;
+}
+
+
+.btn:hover, .sing:hover{
+    color:#E6E6FA;
+}
+
+ .nav-links .btn{
+  float:right;
+}
+
+.banner-title{
+    margin: 80px 130px;
+}
+
+.banner-title h1{
+    text-align: left;
+    font-size: 50px;
+    margin-bottom: 5px;
+}
+.banner-title button,input{
+    border-radius: 10px;
+    
+}
+.banner-title h1 span{
+    color:#08376B;
+    text-shadow: 3px 2px  #08376B;
+    font-family: Rye;
+    font-size: 60px;
+}
+
+.vertical-bar{
+    height:100%;
+    background: #000;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index:2;
+}
+
+.search-icon{
+    height:50px;
+    width: 70px;
+    margin:5px 18px;
+    display: block;
+    color:white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.social-icons{
+    height:40%;
+    width: 106px;
+    background: #08376B;
+    text-align: center;
+    padding-top: 40%; 
+    bottom:0;
+    position: absolute;
+    z-index:-15;
+}
+
+.social-icons .fa{
+    margin:22px 20px;
+    display: block;
+    padding: 8px;
+    color: white;
+    font-size: 30px;
+    border:1px solid #000;
+    border-radius:25%;
+    cursor: pointer;
+    
+}
+
+.banner-title img{
+    position: relative;	  
+    left:130px;		   
+    top:-55px;
+    z-index: 1;
+    margin-left:5px;
+    width:600px;
+    height:500px;
+    animation: slider 9s infinite linear;
+ }
+.feature{
+    position:relative;
+    top:-200px;
+    display: inline-block;
+}
+
+.feature p{
+    font-size: 20px;
+}
+.feature i {
+    position: absolute;		   
+    bottom:10px;
+    padding:10px 8px;
+}
+.feature button{
+   position:relative;
+   left:20px;
+   top:45px;
+}
+
+.sub-menu{
+   display: none;
+   position: absolute;
+   background-color: #f9f9f9;
+   min-width: 160px;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   z-index: 1;
+}
+.sub-menu a {
+ color: black;
+ padding: 12px 16px;
+ text-decoration: none;
+ display: block;
+}
+.sub-menu a:hover {background-color: #E6E6FA ;}
+button:hover .sub-menu  {
+    display: block;
+}
+

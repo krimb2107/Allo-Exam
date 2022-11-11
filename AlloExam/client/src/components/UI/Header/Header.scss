@@ -1,0 +1,111 @@
+.arriere-plan{
+    height: 100vh;
+   /*background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.6)),url(bag2.JPEG);*/
+    background-position: center;
+    background-color:  #F1F1F1 ;/*#ECEEF1 #E6E9F5*/
+    background-size: cover;
+    overflow: hidden;
+    position: static; 
+ }
+ 
+ 
+ .nav-bar{
+    display: flex;
+    padding: 20px 120px;
+ }
+ 
+  .nav-logo img{
+    width:175px;
+    float: left;
+ }
+ 
+ .nav-links{
+    flex: 1;
+    float: right;
+    position: relative;
+    left:550px;
+ }
+ 
+ .nav-links ul{
+     margin-left: 400px;
+     display: inline;
+ }
+ 
+ .nav-links ul li{
+     list-style: none;
+     display: inline-block;
+     padding: 20px 50px;
+     
+ }
+ 
+ .nav-links ul a{
+     color: black;
+     text-decoration: none;
+     font-size: 15px ;
+     background-color: #ECEEF1;
+ }
+ 
+ .nav-links ul li::after{
+     content: '';
+     width: 0;
+     height: 2px;
+     background: #08376B;
+     display: block;
+     margin: auto;   
+     transition: .5s;
+ }
+ 
+ .nav-links ul li:hover::after{
+      width: 100%;
+ }
+
+ .log{
+    padding:10px 10px;
+    margin:15px -45px;
+    background: #08376B;
+    font-weight: bold;
+    cursor: pointer;
+    border: 0.5px solid black;
+    border-radius: 10px;
+    position: relative;
+    top:0px;
+    left:30px;
+    width: 30px;
+    height: 30px;
+    .hala{
+        color: white;
+        font-size:30px;
+    }
+
+    .login{
+        display:none;
+        background: #F1F1F1;
+        border: 2px solid #08376B;
+        border-radius: 5px;
+        width: 230px;
+        height:200px;
+        position: relative;
+        top:10px;
+        left:-155px;
+        z-index:20;
+        .ava {
+            position: relative;
+            left: 88px;
+            top:10px;
+            width:58px;
+            border-radius: 30px;
+        }
+        .home__text{text-align: center;}
+        .home__singOut{
+            background-color: #08376B;
+            color: white;
+            position:relative;
+            left:60px;
+        }
+    }
+
+    
+
+    
+   
+}

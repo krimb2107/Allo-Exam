@@ -1,0 +1,20 @@
+#video-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    grid-auto-rows: 300px;
+    background: black; 
+    height: 650px;
+    width: 1200px;
+    z-index:-1;
+    
+    
+    #localVideo, #remoteVideo{
+        height: 180%;
+        width: 170%;
+        object-fit: cover;
+        border: 2px bold pink;
+        border-radius: 20px;
+        margin: 25px;
+        z-index:1;
+    }
+}
