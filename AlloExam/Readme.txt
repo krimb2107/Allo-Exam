@@ -5,7 +5,7 @@ Deuxiément il faut que vous changer l'adresses ip dans le fichier suivant par v
 
 Les étapes à suivre:
 1/ Ouvrir le dossier dans VS Code.
-2/ Ouvrir votre terminam bash.
+2/ Ouvrir votre terminal bash.
 3/ Taper la commande suivante: 'npm install' .
 4/ Taper la commande suivante: 'cd client' .
 5/ Taper la commande suivante: 'npm install .
